@@ -2,7 +2,7 @@
 #
 # Manages installation of nginx from pkg.
 
-{% from '/srv/salt/nginx/map.jinja' import nginx, sls_block with context %}
+{% from '/srv/salt/base/nginx/map.jinja' import nginx, sls_block with context %}
 {%- if nginx.install_from_repo %}
   {% set from_official = true %}
   {% set from_ppa = false %}
